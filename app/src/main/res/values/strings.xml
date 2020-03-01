@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TheRetroCourse</string>
+    <string-array name="courses">
+        <item>Available Courses</item>
+        <item>Course1</item>
+        <item>Course2</item>
+        <item>Course3</item>
+
+    </string-array>
+</resources>
