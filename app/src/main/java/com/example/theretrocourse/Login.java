@@ -24,18 +24,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         Login.setOnClickListener(this);
         mydb= new DatabaseOperation(this);
     }
-    public void addData(){
-        Login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean isInserted = mydb.insertLoginData(e_name.getText().toString(),e_pass.getText().toString());
-                if(isInserted=true)
-                    Toast.makeText(Login.this,"Data inserted!", Toast.LENGTH_LONG).show();
-                else
-                    Toast.makeText(Login.this,"Error: data not inserted", Toast.LENGTH_LONG).show();
-            }
-        });
-    }
 
     @Override
     public void onClick(View v) {
@@ -51,9 +39,17 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         }
         if(MainActivity.type=="a"){
             addData();
-            intent = new Intent(this,Creation.class);
+            intent = new Intent(this,AdminMainPage.class);
             startActivity(intent);
         }
 
+    }
+    public void addData(){
+        boolean isInserted = mydb.insertLoginData(e_name.getText().toString(),e_pass.getText().toString());
+        if(isInserted=true)
+            Toast.makeText(Login.this,"Data inserted!", Toast.LENGTH_LONG).show();
+        else {
+            Toast.makeText(Login.this,"Error: data not inserted", Toast.LENGTH_LONG).show();
+        }
     }
 }
