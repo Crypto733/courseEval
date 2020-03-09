@@ -5,9 +5,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.jar.Attributes;
 
 public class DatabaseOperation extends SQLiteOpenHelper {
     public static final String database_name ="login.db";

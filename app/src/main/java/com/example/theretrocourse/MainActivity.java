@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     public static String type="";
+    Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,8 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
          Button Admin= findViewById(R.id.admin);
 
          Student.setOnClickListener(this);
-        Employee.setOnClickListener(this);
-        Admin.setOnClickListener(this);
+         Employee.setOnClickListener(this);
+         Admin.setOnClickListener(this);
 
     }
 
@@ -30,20 +31,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()){
             case R.id.student:
-                Toast.makeText(this,"Student clicked", Toast.LENGTH_SHORT).show();
                 type="s";
-                Intent intent = new Intent(this,Login.class);
+                intent = new Intent(this,Login.class);
                 startActivity(intent);
                 break;
             case R.id.employee:
-                Toast.makeText(this,"employee clicked", Toast.LENGTH_SHORT).show();
                 type="e";
                 intent = new Intent(this,Login.class);
                 startActivity(intent);
                 break;
             case R.id.admin:
                 type="a";
-                Toast.makeText(this,"admin clicked", Toast.LENGTH_SHORT).show();
                 intent = new Intent(this,Login.class);
                 startActivity(intent);
                 break;
