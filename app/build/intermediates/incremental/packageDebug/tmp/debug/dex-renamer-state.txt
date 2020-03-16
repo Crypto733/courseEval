@@ -1,4 +1,4 @@
-#Mon Mar 09 20:42:28 CET 2020
-base.0=C\:\\TheRetroCourse\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Mon Mar 16 20:24:23 CET 2020
+base.0=C\:\\courseEval\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

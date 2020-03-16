@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 
 public class CourseData extends SQLiteOpenHelper {
+    /*Den här klassen får vi ändra på mycket, jag gjorde bara strukturen*/
     public static final String database_name ="course.db";
     public static final String table_name ="course_table";
 
