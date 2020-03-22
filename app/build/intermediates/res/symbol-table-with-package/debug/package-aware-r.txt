@@ -26,6 +26,7 @@ animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
 array courses
+array coursesResult
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1025,6 +1026,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable picture2
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -1258,6 +1260,7 @@ id textSpacerNoTitle
 id textStart
 id textView
 id textView2
+id textView3
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
