@@ -25,6 +25,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         Login.setOnClickListener(this);
         mydb= new DatabaseOperation(this);
         insertTestData();
+        testCourseData();
     }
 
     @Override
@@ -34,13 +35,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         String pass = e_pass.getText().toString();
         Cursor cursor = mydb.findLoginData(mail,pass);
 
-        switch (MainActivity.type){
+            switch (MainActivity.type){
             case "s":
                 Boolean foundS = false;
                 while (cursor.moveToNext()){
-                    if (cursor.getString(0).equals((mail) ) &&
-                            cursor.getString(0).contains("@student.bth.se") &&
-                            cursor.getString(1).equals(pass))
+                    if (cursor.getString(0).equals(mail) && cursor.getString(1).equals(pass))
                         foundS = true;
                 }
                 if (foundS==true){
@@ -55,9 +54,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             case "e":
                 Boolean foundE = false;
                 while (cursor.moveToNext()){
-                    if (cursor.getString(0).equals(mail)&&
-                            cursor.getString(0).contains("@bth.se")
-                            && cursor.getString(1).equals(pass))
+                    if (cursor.getString(0).equals(mail) && cursor.getString(1).equals(pass))
                         foundE = true;
                 }
                 if (foundE==true){
@@ -72,9 +69,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             case "a":
                 Boolean foundA = false;
                 while (cursor.moveToNext()){
-                    if (cursor.getString(0).equals(mail) &&
-                            cursor.getString(0).contains("@bth.se") &&
-                            cursor.getString(1).equals(pass))
+                    if (cursor.getString(0).equals(mail) && cursor.getString(1).equals(pass))
                         foundA = true;
                 }
                 if (foundA==true){
@@ -88,12 +83,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                 break;
         }
     }
-    // "@student.bth.se" om det är en student och "@bth.se" om admin eller lärare
     public void insertTestData(){
-        mydb.insertLoginData("m@student.bth.se","12","s");
-        mydb.insertLoginData("b@student.bth.se","b12","s");
-        mydb.insertLoginData("c@bth.se","c12","e");
-        mydb.insertLoginData("d@bth.se","d12","e");
+        mydb.insertLoginData("@student.bth.se","123");
+        mydb.insertLoginData("bbbb12@student.bth.se","bb123");
+        mydb.insertLoginData("cccc12@bth.se","cc123");
+        mydb.insertLoginData("dddd12@bth.se","dd123");
+    }
+    public void testCourseData(){
         mydb.insertCourseData("MA1447" , "Flerdimensionell Analys" , "c@bth.se");
         mydb.insertCourseData("FY1423" , "Fysik 2" , "d@bth.se");
     }
