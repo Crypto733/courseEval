@@ -1,4 +1,4 @@
-#Tue Mar 24 14:38:55 CET 2020
-base.0=C\:\\courseEval\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Wed Mar 25 18:16:30 CET 2020
+base.0=C\:\\courseEval\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
