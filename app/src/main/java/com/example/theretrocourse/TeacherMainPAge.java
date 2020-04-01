@@ -24,8 +24,8 @@ public class TeacherMainPAge extends AppCompatActivity {
         Spinner avCourses = (Spinner) findViewById(R.id.spinner2);
         Spinner reCourses = (Spinner) findViewById(R.id.spinner3);
 
-        ArrayList<String> mailList = new ArrayList<String>();
-        insertDataSpinner(mailList,avCourses,mydb);
+        ArrayList<String> coursesList = new ArrayList<String>();
+        insertDataSpinner(coursesList,avCourses,mydb);
 
         avCourses.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
