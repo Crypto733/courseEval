@@ -1,28 +1,31 @@
 package com.example.theretrocourse;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.res.Resources;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.TextView;
+
+import java.util.ArrayList;
+
 
 public class TeacherMainPAge extends AppCompatActivity {
     int currentItem = 0;
+    ArrayAdapter<String> adapterAvailableCourse;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_main_page);
+        DatabaseOperation mydb = new DatabaseOperation(this);
         Spinner avCourses = (Spinner) findViewById(R.id.spinner2);
         Spinner reCourses = (Spinner) findViewById(R.id.spinner3);
+
+        ArrayList<String> mailList = new ArrayList<String>();
+        insertDataSpinner(mailList,avCourses,mydb);
 
         avCourses.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -32,7 +35,7 @@ public class TeacherMainPAge extends AppCompatActivity {
                 } else {
                     Intent intent = new Intent(TeacherMainPAge.this, Creation.class);
                     startActivity(intent);
-                }
+                     }
             }
 
             @Override
@@ -57,4 +60,16 @@ public class TeacherMainPAge extends AppCompatActivity {
 
             }
         });
-    }}
+    }
+         public void insertDataSpinner(ArrayList<String> coursesList, Spinner avCourses, DatabaseOperation mydb){
+             Cursor cursor = mydb.findCourses();
+             while (cursor.moveToNext()){
+                 if (cursor.getString(2).equals(Login.mail)){
+                     coursesList.add(cursor.getString(1));
+                 }
+             }
+             adapterAvailableCourse = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, coursesList);
+             adapterAvailableCourse.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+             avCourses.setAdapter(adapterAvailableCourse);
+    }
+}

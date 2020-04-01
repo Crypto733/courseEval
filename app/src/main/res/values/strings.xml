@@ -1,14 +1,9 @@
 <resources>
     <string name="app_name">TheRetroCourse</string>
     <string-array name="courses">
-        <item>Course1</item>
-        <item>Course2</item>
-        <item>Course3</item>
 
     </string-array>
     <string-array name ="coursesResult">
-        <item>Course1</item>
-        <item>Course2</item>
     </string-array>
 
 

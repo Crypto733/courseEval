@@ -1,22 +1,29 @@
 package com.example.theretrocourse;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class StudentMainPage extends AppCompatActivity{
     int currentItem = 0;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_main_page);
 
+
         // gÃ¶r grejer med radiobuttons etc...
         Spinner avCourses = (Spinner) findViewById(R.id.spinner2);
         Spinner reCourses = (Spinner) findViewById(R.id.spinner3);
+
 
         avCourses.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
