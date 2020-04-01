@@ -15,6 +15,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     EditText e_mail,e_pass;
     Button Login;
     DatabaseOperation mydb;
+    public static String mail = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,13 +26,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         Login = findViewById(R.id.login);
         Login.setOnClickListener(this);
         mydb= new DatabaseOperation(this);
-        insertTestData();
     }
 
     @Override
     public void onClick(View v) {
 
-        String mail = e_mail.getText().toString();
+        mail = e_mail.getText().toString();
         String pass = e_pass.getText().toString();
         Cursor cursor = mydb.findLoginData(mail,pass);
 
@@ -87,20 +88,5 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                 }
                 break;
         }
-    }
-    public void insertTestData(){
-        mydb.insertLoginData("@student.bth.se","1","s");
-        mydb.insertLoginData("bbbb12@student.bth.se","2","s");
-        mydb.insertLoginData("@bth.se","1","a");
-        mydb.insertLoginData("w@bth.se","12","a");
-        mydb.insertLoginData("dddd12@bth.se","dd123","e");
-        mydb.insertLoginData("hej@bth.se","q","e");
-        mydb.insertLoginData("hejhej@bth.se","w","e");
-
-        mydb.insertCourseData("FY1423","Fysik 2","@bth.s");
-        mydb.insertCourseData("MA1447","Flerdimensionell Analys","dddd12@student.bth.se");
-
-        mydb.insertStudentCourseData(1122,"@student.bth.se");
-        mydb.insertStudentCourseData(2233,"bbbb12@student.bth.se");
     }
 }

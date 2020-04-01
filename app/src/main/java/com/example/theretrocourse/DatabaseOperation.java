@@ -23,7 +23,6 @@ public class DatabaseOperation extends SQLiteOpenHelper {
 
     public DatabaseOperation(Context context){
         super(context, database_name, null, 1);
-
     }
 
     public void onCreate(SQLiteDatabase db){
@@ -44,6 +43,11 @@ public class DatabaseOperation extends SQLiteOpenHelper {
             cursor = db.rawQuery("SELECT*FROM "+ table_name2,null);
         if (MainActivity.type=="a")
             cursor = db.rawQuery("SELECT*FROM "+ table_name3,null);
+        return cursor;
+    }
+    public Cursor findCourses(){
+        SQLiteDatabase db = this.getReadableDatabase();
+           Cursor cursor = db.rawQuery("SELECT*FROM "+ table_name4,null);
         return cursor;
     }
 
