@@ -1,9 +1,9 @@
 package com.example.theretrocourse;
 
-public class EvaluationResult {
+public class AnswerEvaluation {
     private String CourseID,BTH_mail,b1,b2,b3,b4,b5,comment_1,comment_2,comment_3,comment_4,comment_5;
 
-    public EvaluationResult(String CourseID, String BTH_mail, String b1, String b2,
+    public AnswerEvaluation(String CourseID, String BTH_mail, String b1, String b2,
                             String b3, String b4, String b5,
                             String comment_1, String comment_2, String comment_3,
                             String comment_4, String comment_5) {

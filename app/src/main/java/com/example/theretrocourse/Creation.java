@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class Creation extends AppCompatActivity implements View.OnClickListener{
     DatabaseOperation mydb;
-    EvaluationResult evaluationResult;
+    AnswerEvaluation answerEvaluation;
     private Button btn, btnPublish;
 private EditText keyword;
 private RadioGroup rg1,rg2,rg3,rg4,rg5;
@@ -106,8 +106,8 @@ private int num=0;
         String btn5=btnSelected5.getText().toString();
 
         //
-        evaluationResult = new EvaluationResult("1122",Login.mail,btn1,btn2,btn3,btn4,btn5,
+        answerEvaluation = new AnswerEvaluation("1122",Login.mail,btn1,btn2,btn3,btn4,btn5,
                 comment_1,comment_2,comment_3,comment_4,comment_5);
-        Toast.makeText(Creation.this,evaluationResult.toString(),Toast.LENGTH_LONG).show();
+        Toast.makeText(Creation.this, answerEvaluation.toString(),Toast.LENGTH_LONG).show();
     }
 }
