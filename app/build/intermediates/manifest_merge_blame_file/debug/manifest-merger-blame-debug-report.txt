@@ -29,7 +29,7 @@
 20        android:theme="@style/AppTheme" >
 20-->C:\courseEval\app\src\main\AndroidManifest.xml:11:9-40
 21        <activity android:name="com.example.theretrocourse.AdminMainPage" />
-21-->C:\courseEval\app\src\main\AndroidManifest.xml:12:9-60
+21-->C:\courseEval\app\src\main\AndroidManifest.xml:12:9-51
 21-->C:\courseEval\app\src\main\AndroidManifest.xml:12:19-48
 22        <activity android:name="com.example.theretrocourse.StudentMainPage" />
 22-->C:\courseEval\app\src\main\AndroidManifest.xml:13:9-53

@@ -36,7 +36,7 @@ public class TeacherMainPAge extends AppCompatActivity {
                 if (currentItem == position) {
                     return;
                 } else {
-                    Intent intent = new Intent(TeacherMainPAge.this, TeacherTemplateInformation.class);
+                    Intent intent = new Intent(TeacherMainPAge.this, Creation.class);
                     startActivity(intent);
             }
             }
@@ -53,7 +53,7 @@ public class TeacherMainPAge extends AppCompatActivity {
                 if (currentItem == position) {
                     return;
                 } else {
-                    Intent intent = new Intent(TeacherMainPAge.this, Creation.class);
+                    Intent intent = new Intent(TeacherMainPAge.this, CourseAnswers.class);
                     startActivity(intent);
                 }
             }

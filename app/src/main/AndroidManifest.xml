@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TeacherTemplateInformation"></activity>
         <activity android:name=".AdminMainPage" />
         <activity android:name=".StudentMainPage" />
         <activity android:name=".Creation" />
