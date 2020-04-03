@@ -31,8 +31,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
 
-        mail = e_mail.getText().toString();
-        String pass = e_pass.getText().toString();
+        mail = e_mail.getText().toString().trim();
+        String pass = e_pass.getText().toString().trim();
         Cursor cursor = mydb.findLoginData(mail,pass);
 
         switch (MainActivity.type){

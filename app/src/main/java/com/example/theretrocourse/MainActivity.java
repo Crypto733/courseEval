@@ -62,9 +62,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mydb.insertCourseData("FY1423", "Fysik 2", "@student.bth.se");
         mydb.insertCourseData("MA1447", "Flerdimensionell Analys", "hej@bth.se");
         mydb.insertCourseData("PA1459", "Objektorienterad Design", "hej@bth.se");
-
-        mydb.insertStudentCourseData(1122, "@student.bth.se");
-        mydb.insertStudentCourseData(2233, "hej@bth.se");
     }
 
 }

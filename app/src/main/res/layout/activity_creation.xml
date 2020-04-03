@@ -162,7 +162,7 @@
         app:layout_constraintVertical_bias="0.48" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/editTextKeyword"
         android:layout_width="177dp"
         android:layout_height="50dp"
         android:layout_marginEnd="168dp"
@@ -243,6 +243,7 @@
                         android:layout_width="64dp"
                         android:layout_height="46dp"
                         android:text="3"
+                        android:checked="true"
                         android:textColor="#000"
                         android:textSize="16sp" />
 
@@ -265,7 +266,7 @@
                 </RadioGroup>
 
                 <EditText
-                    android:id="@+id/editText4"
+                    android:id="@+id/editText1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -324,6 +325,7 @@
                         android:layout_width="64dp"
                         android:layout_height="46dp"
                         android:text="3"
+                        android:checked="true"
                         android:textColor="#000"
                         android:textSize="16sp" />
 
@@ -346,7 +348,7 @@
                 </RadioGroup>
 
                 <EditText
-                    android:id="@+id/editText7"
+                    android:id="@+id/editText2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -405,6 +407,7 @@
                         android:layout_width="64dp"
                         android:layout_height="46dp"
                         android:text="3"
+                        android:checked="true"
                         android:textColor="#000"
                         android:textSize="16sp" />
 
@@ -427,7 +430,7 @@
                 </RadioGroup>
 
                 <EditText
-                    android:id="@+id/editText6"
+                    android:id="@+id/editText3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -486,6 +489,7 @@
                         android:layout_width="64dp"
                         android:layout_height="46dp"
                         android:text="3"
+                        android:checked="true"
                         android:textColor="#000"
                         android:textSize="16sp" />
 
@@ -508,7 +512,7 @@
                 </RadioGroup>
 
                 <EditText
-                    android:id="@+id/editText8"
+                    android:id="@+id/editText4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -567,6 +571,7 @@
                         android:layout_width="64dp"
                         android:layout_height="46dp"
                         android:text="3"
+                        android:checked="true"
                         android:textColor="#000"
                         android:textSize="16sp" />
 
@@ -589,7 +594,7 @@
                 </RadioGroup>
 
                 <EditText
-                    android:id="@+id/editText9"
+                    android:id="@+id/editText5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
