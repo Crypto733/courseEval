@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,15 +16,23 @@ import java.util.ArrayList;
 public class StudentMainPage extends AppCompatActivity{
     int currentItem = 0;
 
+    ArrayAdapter<String> adapterAvailableCourse;
+    ArrayAdapter<String> adapterResultsCourse;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_main_page);
 
+        DatabaseOperation mydb = new DatabaseOperation(this);
 
         // gÃ¶r grejer med radiobuttons etc...
         Spinner avCourses = (Spinner) findViewById(R.id.spinner2);
         Spinner reCourses = (Spinner) findViewById(R.id.spinner3);
 
+        ArrayList<String> publishedCourseList = new ArrayList<String>();
+        ArrayList<String> resCourseList = new ArrayList<String>();
+        insertDataSpinner2(publishedCourseList,avCourses,mydb);
+        insertDataSpinner3(resCourseList,reCourses,mydb);
 
         avCourses.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -32,7 +41,7 @@ public class StudentMainPage extends AppCompatActivity{
                     return;
                 }
                 else{
-                    Intent intent = new Intent(StudentMainPage.this, Creation.class);
+                    Intent intent = new Intent(StudentMainPage.this, EvaluationStudent.class);
                     startActivity(intent);
                 }
             }
@@ -49,7 +58,7 @@ public class StudentMainPage extends AppCompatActivity{
                 if(currentItem==position){
                     return;
                 }
-                else{
+                else {
                     Intent intent = new Intent(StudentMainPage.this, CourseAnswers.class);
                     startActivity(intent);
                 }
@@ -61,5 +70,21 @@ public class StudentMainPage extends AppCompatActivity{
             }
         });
     }
+// Toast.makeText(StudentMainPage.this, "Error: No available evaluation for " + Login.mail, Toast.LENGTH_LONG).show();
+    public void insertDataSpinner2(ArrayList<String> publishedCourseList, Spinner avCourses, DatabaseOperation mydb){
+        publishedCourseList.add("Choose below: ");
+        publishedCourseList.add(Creation.rubric.getText().toString());
 
+        adapterAvailableCourse = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, publishedCourseList);
+        adapterAvailableCourse.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        avCourses.setAdapter(adapterAvailableCourse);
+    }
+    public void insertDataSpinner3(ArrayList<String> resCourseList,Spinner reCourses, DatabaseOperation mydb){
+        resCourseList.add("Choose below: ");
+        //fortsätt då studenter gjort course evaluation
+        // och visa färdiga course evaluation som teacher kan kommentera på(hämta från evaluation_table för att se resultat)
+        adapterResultsCourse = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, resCourseList);
+        adapterResultsCourse.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        reCourses.setAdapter(adapterResultsCourse);
+    }
 }

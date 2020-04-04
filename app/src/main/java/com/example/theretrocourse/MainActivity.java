@@ -53,15 +53,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
     public void insertTestData() {
-        mydb.insertLoginData("@student.bth.se", "1", "s");
+        //Man får ändra denna väldigt ofta för att SQLite filen inte uppdateras endast om man inte lägger till
+        mydb.insertLoginData("mumt17@student.bth.se","mumt17","s");
+        mydb.insertLoginData("saab17@student.bth.se","saab17","s");
+        mydb.insertLoginData("adab17@student.bth.se","adab17","s");
+        mydb.insertLoginData("malo17@student.bth.se","malo17","s");
+        mydb.insertLoginData("liab18@student.bth.se","liab18","s");
+        mydb.insertLoginData("mahi18@student.bth.se","mahi18","s");
+        mydb.insertLoginData("raha18@student.bth.se","raha18","s");
+        mydb.insertLoginData("lyto18@student.bth.se","lyto18","s");
+        mydb.insertLoginData("flop19@student.bth.se","flop19","s");
+        mydb.insertLoginData("tryo19@student.bth.se","tryo19","s");
 
-        mydb.insertLoginData("c@bth.se", "1", "a");
+        mydb.insertLoginData("martin@bth.se","m12","e");
+        mydb.insertLoginData("hej@bth.se","q","e");
+        mydb.insertLoginData("abbas@bth.se","a","e");
 
-        mydb.insertLoginData("hej@bth.se", "q", "e");
-
-        mydb.insertCourseData("FY1423", "Fysik 2", "@student.bth.se");
-        mydb.insertCourseData("MA1447", "Flerdimensionell Analys", "hej@bth.se");
+        mydb.insertCourseData("DV1558" , "Tillämpad Programmering i Java" , "abbas@bth.se");
+        mydb.insertCourseData("DV1559" , "Inledande Programmering i Java" , "abbas@bth.se");
+        mydb.insertCourseData("IY1417" , "Mikroekonomi" , "martin@bth.se");
         mydb.insertCourseData("PA1459", "Objektorienterad Design", "hej@bth.se");
+        mydb.insertCourseData("MA1446" , "Analys 2" , "hej@bth.se");
+        mydb.insertCourseData("FY1424" , "Fysik 3" , "hej@bth.se");
+
+        mydb.insertLoginData("riab@bth.se","riab","a");
+        mydb.insertLoginData("rash@bth.se","rash","a");
+        mydb.insertLoginData("macy@bth.se","macy","a");
+        mydb.insertLoginData("wito@bth.se","wito","a");
     }
 
 }
