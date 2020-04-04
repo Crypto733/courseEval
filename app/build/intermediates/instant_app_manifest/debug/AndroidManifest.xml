@@ -19,6 +19,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.theretrocourse.EvaluationStudent" />
         <activity android:name="com.example.theretrocourse.AdminMainPage" />
         <activity android:name="com.example.theretrocourse.StudentMainPage" />
         <activity android:name="com.example.theretrocourse.Creation" />

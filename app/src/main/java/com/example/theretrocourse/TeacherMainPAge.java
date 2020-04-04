@@ -17,12 +17,13 @@ public class TeacherMainPAge extends AppCompatActivity {
     int currentItem = 0;
     ArrayAdapter<String> adapterAvailableCourse;
     ArrayAdapter<String> adapterResultsCourse;
+    public static String text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_main_page);
         DatabaseOperation mydb = new DatabaseOperation(this);
-        Spinner avCourses = (Spinner) findViewById(R.id.spinner2);
+        final Spinner avCourses = (Spinner) findViewById(R.id.spinner2);
         Spinner reCourses = (Spinner) findViewById(R.id.spinner3);
 
         ArrayList<String> avbCourseList = new ArrayList<String>();
@@ -36,6 +37,7 @@ public class TeacherMainPAge extends AppCompatActivity {
                 if (currentItem == position) {
                     return;
                 } else {
+                    text = avCourses.getItemAtPosition(position).toString();
                     Intent intent = new Intent(TeacherMainPAge.this, Creation.class);
                     startActivity(intent);
             }
