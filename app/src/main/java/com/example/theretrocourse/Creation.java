@@ -51,8 +51,6 @@ public class Creation extends AppCompatActivity implements View.OnClickListener{
                 }
                 break;
             case R.id.btnSubmit:
-                keyword.setVisibility(View.GONE);
-                btn.setVisibility(View.GONE);
                 boolean isInserted = insertData(words,num);
                 if (isInserted=true) {
                     Toast.makeText(this, "Evaluation published successfully!", Toast.LENGTH_LONG).show();
@@ -66,9 +64,8 @@ public class Creation extends AppCompatActivity implements View.OnClickListener{
 
     }
     public boolean insertData(String [] words, int num){
-        for (int i=1;i<=num;i++){
-            //lagra kurskod och keywords
-           mydb.insertCourseEval(rubric.getText().toString(),Login.mail,words[i]);
+       for (int i=0;i<=num;i++){
+           mydb.insertKeywordsCourseEval(TeacherMainPAge.text,words[i]);
         }
         return true;
     }

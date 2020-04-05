@@ -18,15 +18,14 @@ public class StudentMainPage extends AppCompatActivity{
 
     ArrayAdapter<String> adapterAvailableCourse;
     ArrayAdapter<String> adapterResultsCourse;
+    public static String text;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_main_page);
 
         DatabaseOperation mydb = new DatabaseOperation(this);
-
-        // gÃ¶r grejer med radiobuttons etc...
-        Spinner avCourses = (Spinner) findViewById(R.id.spinner2);
+        final Spinner avCourses = (Spinner) findViewById(R.id.spinner2);
         Spinner reCourses = (Spinner) findViewById(R.id.spinner3);
 
         ArrayList<String> publishedCourseList = new ArrayList<String>();
@@ -41,6 +40,7 @@ public class StudentMainPage extends AppCompatActivity{
                     return;
                 }
                 else{
+                    text = avCourses.getItemAtPosition(position).toString();
                     Intent intent = new Intent(StudentMainPage.this, EvaluationStudent.class);
                     startActivity(intent);
                 }
@@ -59,6 +59,7 @@ public class StudentMainPage extends AppCompatActivity{
                     return;
                 }
                 else {
+
                     Intent intent = new Intent(StudentMainPage.this, CourseAnswers.class);
                     startActivity(intent);
                 }

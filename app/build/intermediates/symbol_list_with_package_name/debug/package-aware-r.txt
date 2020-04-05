@@ -1128,6 +1128,7 @@ id blocking
 id bottom
 id btn
 id btnSubmit
+id btnSubmit2
 id button
 id buttonPanel
 id center
@@ -1159,6 +1160,7 @@ id direct
 id disableHome
 id editText
 id editText2
+id editText4
 id editText5
 id editTextKeyword
 id edit_query
@@ -1272,7 +1274,6 @@ id radioGroup4
 id radioGroup5
 id radioGroup6
 id radioGroup7
-id recyclerView
 id result
 id right
 id right_icon
