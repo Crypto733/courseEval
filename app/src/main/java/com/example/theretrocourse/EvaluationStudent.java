@@ -15,6 +15,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
+
 public class EvaluationStudent extends AppCompatActivity implements View.OnClickListener{
     AnswerEvaluation answerEvaluation;
     RadioGroup rg1,rg2,rg3,rg4,rg5,rg6,rg7;
@@ -26,6 +28,9 @@ public class EvaluationStudent extends AppCompatActivity implements View.OnClick
     private TextView txt;
     Intent intent;
     private Button button;
+    private String[] temp = new String[12];
+    private String[] words = new String[12];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +51,6 @@ public class EvaluationStudent extends AppCompatActivity implements View.OnClick
         rubric.setText(StudentMainPage.text);
         button.setOnClickListener(this);
 
-        // Tror att metoden funkar, men databasfilen uppdateras inte
         setKeywords();
 
     }
@@ -55,7 +59,7 @@ public class EvaluationStudent extends AppCompatActivity implements View.OnClick
             case R.id.btnSubmit:
                 validateAndStoreData();
                 Toast.makeText(this,"Thank you for participating in the course evaluation!",Toast.LENGTH_LONG).show();
-                intent = new Intent(this,MainActivity.class);
+                intent = new Intent(this, StudentMainPage.class);
                 startActivity(intent);
                 break;
         }
@@ -66,33 +70,45 @@ public class EvaluationStudent extends AppCompatActivity implements View.OnClick
         if (str_comment.isEmpty()) {
             comment.setError("Field can't be empty");
         }
-
         storeInformation(str_comment);
     }
+
     public void storeInformation(String str_comment){
         btnSelected1=findViewById(rg1.getCheckedRadioButtonId());
         btnSelected2=findViewById(rg2.getCheckedRadioButtonId());
         btnSelected3=findViewById(rg3.getCheckedRadioButtonId());
         btnSelected4=findViewById(rg4.getCheckedRadioButtonId());
         btnSelected5=findViewById(rg5.getCheckedRadioButtonId());
-        String btn1=btnSelected1.getText().toString();
-        String btn2=btnSelected2.getText().toString();
-        String btn3=btnSelected3.getText().toString();
-        String btn4=btnSelected4.getText().toString();
-        String btn5=btnSelected5.getText().toString();
+        btnSelected6=findViewById(rg6.getCheckedRadioButtonId());
+        btnSelected7=findViewById(rg7.getCheckedRadioButtonId());
+        String btn1 = btnSelected1.getText().toString();
+        String btn2 = btnSelected2.getText().toString();
+        String btn3 = btnSelected3.getText().toString();
+        String btn4 = btnSelected4.getText().toString();
+        String btn5 = btnSelected5.getText().toString();
+        String btn6 = btnSelected6.getText().toString();
+        String btn7 = btnSelected7.getText().toString();
 
-        mydb.insertResulteData(rubric.getText().toString(),Login.mail,btn1,btn2,btn3,btn4,btn5,
-                str_comment);
+        mydb.insertResulteData(btn1,btn2,btn3,btn4,btn5, btn6, btn7, str_comment,rubric.getText().toString());
         mydb.insertFinishedCourses(rubric.getText().toString());
     }
 
-    //lägger bara in på keyword 1
     public void setKeywords(){
         Cursor cursor = mydb.findKeywords();
         while (cursor.moveToNext()){
-            num++;
-            txt = findViewById(R.id.textView + (num));
-            txt.setText(cursor.getString(0));
+            if(StudentMainPage.text.equals(cursor.getString(0))) {
+                temp = cursor.getString(1).split(",");
+                // copying array org to copy
+                 words = Arrays.copyOf(temp, 12);
+            }
+        }
+        for(int i = 0; i< words.length; i++){
+            txt = findViewById(R.id.textView +(i+1));
+            if (txt == null) {
+            }
+            else{
+                txt.setText(words[i]);
+            }
         }
     }
 }

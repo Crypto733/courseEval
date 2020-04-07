@@ -4,6 +4,10 @@
         "source": "C:\\courseEval\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\drawable_wito.png.flat",
+        "source": "C:\\courseEval\\app\\src\\main\\res\\drawable\\wito.png"
+    },
+    {
         "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bth2.jpg.flat",
         "source": "C:\\courseEval\\app\\src\\main\\res\\drawable-v24\\bth2.jpg"
     },
@@ -16,8 +20,16 @@
         "source": "C:\\courseEval\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
+        "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rania.jpg.flat",
+        "source": "C:\\courseEval\\app\\src\\main\\res\\drawable\\rania.jpg"
+    },
+    {
         "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\courseEval\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_see_student_answers.xml.flat",
+        "source": "C:\\courseEval\\app\\src\\main\\res\\layout\\activity_see_student_answers.xml"
     },
     {
         "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
@@ -42,6 +54,10 @@
     {
         "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\courseEval\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_see_created_course.xml.flat",
+        "source": "C:\\courseEval\\app\\src\\main\\res\\layout\\activity_see_created_course.xml"
     },
     {
         "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
@@ -84,6 +100,10 @@
         "source": "C:\\courseEval\\app\\src\\main\\res\\drawable\\bthlogga.jpg"
     },
     {
+        "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rimsbild.jpg.flat",
+        "source": "C:\\courseEval\\app\\src\\main\\res\\drawable\\rimsbild.jpg"
+    },
+    {
         "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\courseEval\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
@@ -116,6 +136,10 @@
         "source": "C:\\courseEval\\app\\src\\main\\res\\layout\\activity_teacher_main_page.xml"
     },
     {
+        "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\drawable_raniasbild.jpg.flat",
+        "source": "C:\\courseEval\\app\\src\\main\\res\\drawable\\raniasbild.jpg"
+    },
+    {
         "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
         "source": "C:\\courseEval\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
     },
@@ -124,11 +148,27 @@
         "source": "C:\\courseEval\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_an_answer.xml.flat",
+        "source": "C:\\courseEval\\app\\src\\main\\res\\layout\\activity_an_answer.xml"
+    },
+    {
+        "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\drawable_evaluation.jpg.flat",
+        "source": "C:\\courseEval\\app\\src\\main\\res\\drawable\\evaluation.jpg"
+    },
+    {
         "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\layout_course_answers.xml.flat",
         "source": "C:\\courseEval\\app\\src\\main\\res\\layout\\course_answers.xml"
     },
     {
         "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "C:\\courseEval\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rim.jpg.flat",
+        "source": "C:\\courseEval\\app\\src\\main\\res\\drawable\\rim.jpg"
+    },
+    {
+        "merged": "C:\\courseEval\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_course_c_r_u_d_y.xml.flat",
+        "source": "C:\\courseEval\\app\\src\\main\\res\\layout\\activity_course_c_r_u_d_y.xml"
     }
 ]

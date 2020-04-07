@@ -29,7 +29,7 @@ public class Creation extends AppCompatActivity implements View.OnClickListener{
         rubric.setText(TeacherMainPAge.text);
 
         keyword=(EditText)findViewById(R.id.editTextKeyword);
-        words = new String[13];
+        words = new String[14];
         mydb = new DatabaseOperation(this);
         btn = findViewById(R.id.btn);
         btnPublish = findViewById(R.id.btnSubmit);
@@ -42,31 +42,46 @@ public class Creation extends AppCompatActivity implements View.OnClickListener{
             case R.id.btn:
                 num++;
                 if(num<=12 && num>=1) {
-                    txt = findViewById(R.id.textView + (num));
-                    txt.setText(keyword.getText());
-                    words[num]=txt.getText().toString();
+                    txt = findViewById(R.id.textView+(num));
+                    if(txt == null){
+                    }
+                    else {
+                        txt.setText(keyword.getText());
+                        words[num - 1] = txt.getText().toString();
+                    }
                 }
+
                 else{
                     Toast.makeText(this,"You can't enter more keywords", Toast.LENGTH_LONG).show();
                 }
                 break;
             case R.id.btnSubmit:
-                boolean isInserted = insertData(words,num);
+                boolean isInserted = insertData(words, num);
                 if (isInserted=true) {
                     Toast.makeText(this, "Evaluation published successfully!", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(this, MainActivity.class);
+                    Intent intent = new Intent(this, TeacherMainPAge.class);
                     startActivity(intent);
                 }
-                else
+                if(isInserted=false)
                     Toast.makeText(this, "Error: Data not inserted!", Toast.LENGTH_LONG).show();
                 break;
         }
 
     }
+
+
     public boolean insertData(String [] words, int num){
-       for (int i=0;i<=num;i++){
-           mydb.insertKeywordsCourseEval(TeacherMainPAge.text,words[i]);
-        }
+        String str = convertArrayToStringMethod(words, num);
+        Toast.makeText(this, str, Toast.LENGTH_LONG).show();
+        mydb.insertKeywordsCourseEval(TeacherMainPAge.text,str,Login.mail);
         return true;
+    }
+
+    public String convertArrayToStringMethod(String[] words, int num) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i <= num; i++) {
+            stringBuilder.append(words[i]+",");
+        }
+        return stringBuilder.toString();
     }
 }

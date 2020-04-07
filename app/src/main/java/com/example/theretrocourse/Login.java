@@ -50,7 +50,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                     startActivity(intent);
                 }
                 else if (foundS==false){
-                    Toast.makeText(Login.this,"Error: Email or password incorrect", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Login.this,"Email or password incorrect, Notice: You are in the student view", Toast.LENGTH_LONG).show();
                 }
                 break;
             case "e":
@@ -67,7 +67,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                     startActivity(intent);
                 }
                 else if (foundE==false){
-                    Toast.makeText(Login.this,"Error: Email or password incorrect", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Login.this,"Email or password incorrect, Notice: You are in the employee view", Toast.LENGTH_LONG).show();
                 }
                 break;
             case "a":
@@ -75,7 +75,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                 while (cursor.moveToNext()){
                     if (cursor.getString(0).equals(mail) &&
                             cursor.getString(0).contains("@bth.se") &&
-                            cursor.getString(1).equals(pass))
+                            cursor.getString(2).equals(pass))
                         foundA = true;
                 }
                 if (foundA==true){
@@ -84,7 +84,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                     startActivity(intent);
                 }
                 else if (foundA==false){
-                    Toast.makeText(Login.this,"Error: Email or password incorrect", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Login.this,"Email or password incorrect, Notice: You are in the admin view", Toast.LENGTH_LONG).show();
                 }
                 break;
         }

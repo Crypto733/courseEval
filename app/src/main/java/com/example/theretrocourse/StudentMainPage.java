@@ -15,7 +15,6 @@ import java.util.ArrayList;
 
 public class StudentMainPage extends AppCompatActivity{
     int currentItem = 0;
-
     ArrayAdapter<String> adapterAvailableCourse;
     ArrayAdapter<String> adapterResultsCourse;
     public static String text;
@@ -74,11 +73,17 @@ public class StudentMainPage extends AppCompatActivity{
 // Toast.makeText(StudentMainPage.this, "Error: No available evaluation for " + Login.mail, Toast.LENGTH_LONG).show();
     public void insertDataSpinner2(ArrayList<String> publishedCourseList, Spinner avCourses, DatabaseOperation mydb){
         publishedCourseList.add("Choose below: ");
-        publishedCourseList.add(Creation.rubric.getText().toString());
-
+        Cursor cursor = mydb.findStudentCourse();
+        while (cursor.moveToNext()){
+            if (cursor.getString(1).equals(Login.mail)){
+                publishedCourseList.add(cursor.getString(0));
+            }
+        }
         adapterAvailableCourse = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, publishedCourseList);
         adapterAvailableCourse.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         avCourses.setAdapter(adapterAvailableCourse);
+
+
     }
     public void insertDataSpinner3(ArrayList<String> resCourseList,Spinner reCourses, DatabaseOperation mydb){
         resCourseList.add("Choose below: ");
