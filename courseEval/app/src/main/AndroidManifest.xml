@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AnAnswer"></activity>
-        <activity android:name=".seeStudentAnswers" />
+        <activity android:name=".GenerateResultA"></activity>
+        <activity android:name=".AnAnswerA" />
+        <activity android:name=".seeStudentAnswersT" />
+        <activity android:name=".seeStudentAnswer2" />
+        <activity android:name=".GenerateResultT" />
+        <activity android:name=".AnAnswerT" />
+        <activity android:name=".seeStudentAnswersA" />
         <activity android:name=".seeCreatedCourse" />
         <activity android:name=".CourseCRUDY" />
         <activity android:name=".EvaluationStudent" />

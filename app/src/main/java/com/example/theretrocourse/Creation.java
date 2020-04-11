@@ -47,11 +47,12 @@ public class Creation extends AppCompatActivity implements View.OnClickListener{
                     }
                     else {
                         txt.setText(keyword.getText());
-                        words[num - 1] = txt.getText().toString();
+                        words[num] = txt.getText().toString();
                     }
                 }
 
-                else{
+                else if(num>12){
+                    num = 12;
                     Toast.makeText(this,"You can't enter more keywords", Toast.LENGTH_LONG).show();
                 }
                 break;
@@ -80,6 +81,7 @@ public class Creation extends AppCompatActivity implements View.OnClickListener{
     public String convertArrayToStringMethod(String[] words, int num) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i <= num; i++) {
+            if(words[i]!=null)
             stringBuilder.append(words[i]+",");
         }
         return stringBuilder.toString();

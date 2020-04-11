@@ -37,6 +37,9 @@ public class AdminMainPage extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_admin_main_page);
         mydb = new DatabaseOperation(this);
 
+        Button logout = findViewById(R.id.btnLogout);
+        logout.setOnClickListener(this);
+
         acronym = findViewById(R.id.editText3);
         txt = findViewById(R.id.Welcometxt);
         next = findViewById(R.id.button);
@@ -95,8 +98,13 @@ public class AdminMainPage extends AppCompatActivity implements View.OnClickList
                    // printa ut alla i spinner
                 name = acronym.getText().toString().trim();
                 insertDataSpinner(avbCourseList,avCourses,mydb);
-
-        }
+                break;
+             case R.id.btnLogout:
+                 Toast.makeText(this,"You have logged out!",Toast.LENGTH_SHORT).show();
+                 Intent intent = new Intent(this, MainActivity.class);
+                 startActivity(intent);
+                 break;
+            }
     }
 
     public void insertDataSpinner(ArrayList<String> avbCourseList, Spinner avCourses, DatabaseOperation mydb){

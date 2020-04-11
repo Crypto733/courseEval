@@ -25,6 +25,7 @@ public class EvaluationStudent extends AppCompatActivity implements View.OnClick
     public static TextView rubric;
     DatabaseOperation mydb;
     int num = 0;
+    String id = "";
     private TextView txt;
     Intent intent;
     private Button button;
@@ -89,7 +90,14 @@ public class EvaluationStudent extends AppCompatActivity implements View.OnClick
         String btn6 = btnSelected6.getText().toString();
         String btn7 = btnSelected7.getText().toString();
 
-        mydb.insertResulteData(btn1,btn2,btn3,btn4,btn5, btn6, btn7, str_comment,rubric.getText().toString());
+        Cursor cursor= mydb.findID();
+        while(cursor.moveToNext()){
+            if(cursor.getString(2).equals(Login.mail) && cursor.getString(1).equals(StudentMainPage.text)){
+                 id = cursor.getString(0);
+            }
+        }
+
+        mydb.insertResulteData(id,btn1,btn2,btn3,btn4,btn5, btn6, btn7, str_comment,rubric.getText().toString());
         mydb.insertFinishedCourses(rubric.getText().toString());
     }
 

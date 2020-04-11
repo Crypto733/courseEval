@@ -3,6 +3,7 @@ package com.example.theretrocourse;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,6 +41,10 @@ public class Creation extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn:
+                //gr en while loop där när num blir högre 13( kanske) så kommer den alltid förbli 12
+                /*while (num>13){
+                    num=12;
+                }*/
                 num++;
                 if(num<=12 && num>=1) {
                     txt = findViewById(R.id.textView+(num));
@@ -50,10 +55,11 @@ public class Creation extends AppCompatActivity implements View.OnClickListener{
                         words[num - 1] = txt.getText().toString();
                     }
                 }
-
                 else{
                     Toast.makeText(this,"You can't enter more keywords", Toast.LENGTH_LONG).show();
                 }
+
+
                 break;
             case R.id.btnSubmit:
                 boolean isInserted = insertData(words, num);
@@ -61,6 +67,7 @@ public class Creation extends AppCompatActivity implements View.OnClickListener{
                     Toast.makeText(this, "Evaluation published successfully!", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(this, TeacherMainPAge.class);
                     startActivity(intent);
+
                 }
                 if(isInserted=false)
                     Toast.makeText(this, "Error: Data not inserted!", Toast.LENGTH_LONG).show();

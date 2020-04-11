@@ -90,6 +90,8 @@ public class EvaluationStudent extends AppCompatActivity implements View.OnClick
         String btn7 = btnSelected7.getText().toString();
 
         mydb.insertResulteData(btn1,btn2,btn3,btn4,btn5, btn6, btn7, str_comment,rubric.getText().toString());
+        //lite problem att inserta i finishedcourses table(se 4:Run längst ner vänster för error).
+        //android.database.sqlite.SQLiteException: table finished_table has no column named CourseID (code 1): , while compiling: INSERT INTO finished_table(CourseID) VALUES (?)
         mydb.insertFinishedCourses(rubric.getText().toString());
     }
 
