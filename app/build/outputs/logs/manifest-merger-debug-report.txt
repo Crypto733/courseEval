@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-27:12
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-31:12
 MERGED from [androidx.navigation:navigation-ui:2.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\91c4638cc4295b998a60034fcde58944\navigation-ui-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\01aba6feafaa9666a150e0ccab90f24c\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\7805427e3445d32c2ff10acb510a061d\appcompat-1.0.2\AndroidManifest.xml:17:1-22:12
@@ -39,25 +39,25 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\Admin\.gradle\
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\54ec9a60a0f20829d9c5323f1ce0908c\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\0571339fd4cb74441b19561f6766bb98\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\0f91f258f9d0abaa0e56c019df47bd85\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:3:5-41
 		INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml
 		INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml
-		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-27:12
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-31:12
 		INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml
-		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-27:12
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:2:1-31:12
 		INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:5:5-25:19
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:5:5-29:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\01aba6feafaa9666a150e0ccab90f24c\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\01aba6feafaa9666a150e0ccab90f24c\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Admin\.gradle\caches\transforms-2\files-2.1\75fe1a0d0ea641341446dfd6b8974e96\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
@@ -80,44 +80,60 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ad
 		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.theretrocourse.AnAnswer
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:12:9-55
+	android:name
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:12:19-43
+activity#com.example.theretrocourse.seeStudentAnswers
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:13:9-55
+	android:name
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:13:19-52
+activity#com.example.theretrocourse.seeCreatedCourse
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:14:9-54
+	android:name
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:14:19-51
+activity#com.example.theretrocourse.CourseCRUDY
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:15:9-49
+	android:name
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:15:19-46
 activity#com.example.theretrocourse.EvaluationStudent
-ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:12:9-64
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:16:9-55
 	android:name
-		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:12:19-52
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:16:19-52
 activity#com.example.theretrocourse.AdminMainPage
-ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:13:9-51
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:17:9-51
 	android:name
-		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:13:19-48
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:17:19-48
 activity#com.example.theretrocourse.StudentMainPage
-ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:14:9-53
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:18:9-53
 	android:name
-		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:14:19-50
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:18:19-50
 activity#com.example.theretrocourse.Creation
-ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:15:9-46
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:19:9-46
 	android:name
-		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:15:19-43
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:19:19-43
 activity#com.example.theretrocourse.TeacherMainPAge
-ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:16:9-53
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:20:9-53
 	android:name
-		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:16:19-50
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:20:19-50
 activity#com.example.theretrocourse.Login
-ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:17:9-43
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:21:9-43
 	android:name
-		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:17:19-40
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:21:19-40
 activity#com.example.theretrocourse.MainActivity
-ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:18:9-24:20
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:22:9-28:20
 	android:name
-		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:18:19-47
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:22:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from C:\courseEval\app\src\main\AndroidManifest.xml:26:27-74
 uses-sdk
 INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\courseEval\app\src\main\AndroidManifest.xml
